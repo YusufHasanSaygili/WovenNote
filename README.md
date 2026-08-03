@@ -23,6 +23,16 @@
 
 WovenNote is a desktop notes application for people who want rich documents without giving up local ownership. Notes stay on your computer, the core app works without an account, and an API key is needed only for the optional AI features.
 
+## Screenshots
+
+### A visual board that adapts to your notes
+
+![WovenNote dark note board with four draggable note cards](docs/screenshots/wovennote-board.png)
+
+### Rich editing with an optional note-aware AI panel
+
+![WovenNote rich note editor and optional AI panel](docs/screenshots/wovennote-editor.png)
+
 ## Why WovenNote?
 
 Most basic note apps stop at formatted text or require a cloud account. WovenNote combines a visual note board, a block-style rich editor, local multimedia, durable backups, and note-aware AI in one offline-capable desktop app.
