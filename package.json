@@ -1,0 +1,119 @@
+{
+  "name": "wovennote",
+  "version": "0.1.7",
+  "description": "Local-first AI-assisted desktop notes application",
+  "productName": "WovenNote",
+  "private": true,
+  "main": "out/main/index.js",
+  "author": "Yusuf Hasan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YusufHasanSaygili/WovenNote.git"
+  },
+  "homepage": "https://github.com/YusufHasanSaygili/WovenNote#readme",
+  "bugs": {
+    "url": "https://github.com/YusufHasanSaygili/WovenNote/issues"
+  },
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "start": "electron-vite preview",
+    "postinstall": "electron-builder install-app-deps",
+    "format": "prettier --write \"package.json\" \"*.config.{ts,mjs}\" \"tsconfig*.json\" \"src/**/*.{ts,tsx,css,html}\" \"tests/**/*.{ts,mjs}\"",
+    "format:check": "prettier --check \"package.json\" \"*.config.{ts,mjs}\" \"tsconfig*.json\" \"src/**/*.{ts,tsx,css,html}\" \"tests/**/*.{ts,mjs}\"",
+    "lint": "eslint .",
+    "type-check": "npm run type-check:node && npm run type-check:renderer",
+    "type-check:node": "tsc --noEmit -p tsconfig.node.json",
+    "type-check:renderer": "tsc --noEmit -p tsconfig.web.json",
+    "test": "vitest run",
+    "test:installed": "node tests/release/installed-app-smoke.mjs",
+    "test:unit": "vitest run",
+    "test:smoke": "playwright test",
+    "build": "electron-vite build",
+    "package:win": "npm run build && electron-builder --win nsis --x64"
+  },
+  "dependencies": {
+    "@tiptap/extension-color": "3.29.2",
+    "@tiptap/extension-highlight": "3.29.2",
+    "@tiptap/extension-table": "3.29.2",
+    "@tiptap/extension-task-item": "3.29.2",
+    "@tiptap/extension-task-list": "3.29.2",
+    "@tiptap/extension-text-align": "3.29.2",
+    "@tiptap/extension-text-style": "3.29.2",
+    "@tiptap/react": "3.29.2",
+    "@tiptap/starter-kit": "3.29.2",
+    "better-sqlite3": "13.0.1",
+    "fflate": "0.8.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-grid-layout": "2.2.3",
+    "react-resizable-panels": "4.12.2",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.62.0",
+    "@swc/core": "1.15.46",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/jest-dom": "7.0.0",
+    "@testing-library/react": "16.3.2",
+    "@types/better-sqlite3": "7.6.13",
+    "@types/node": "26.1.2",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.2.0",
+    "electron": "43.2.0",
+    "electron-builder": "26.15.3",
+    "electron-vite": "5.0.0",
+    "eslint": "10.8.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.3",
+    "globals": "17.8.0",
+    "jsdom": "29.1.1",
+    "prettier": "3.9.6",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.65.0",
+    "vite": "7.3.6",
+    "vitest": "4.1.10"
+  },
+  "build": {
+    "appId": "com.yusufhasan.wovennote",
+    "productName": "WovenNote",
+    "asar": true,
+    "asarUnpack": [
+      "node_modules/better-sqlite3/**/*"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "out/**/*",
+      "build/icon.png",
+      "package.json"
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "guid": "92d0152d-4083-5d87-a86d-31fc787dcc3d",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title description">
+  <title id="title">WovenNote notebook</title>
+  <desc id="description">A rounded black notebook with six softly waving handwritten lines.</desc>
+  <rect x="154" y="78" width="716" height="868" rx="116" fill="#0b0c0f" stroke="#000" stroke-width="28"/>
+  <rect x="188" y="112" width="648" height="800" rx="84" fill="#17191e" stroke="#343841" stroke-width="8"/>
+  <g fill="none" stroke="#f6f3ea" stroke-linecap="round" stroke-linejoin="round" stroke-width="28">
+    <path d="M254 250c44-40 91-36 135-6 49 34 90 43 139 17 44-24 92-37 163-27"/>
+    <path d="M268 352c51-58 102-53 150-15 56 44 111 54 178 20 31-16 61-23 104-18"/>
+    <path d="M244 474c67-37 114-76 176-77 54-1 66 58 124 55 50-3 89-37 156-58"/>
+    <path d="M286 590c31-53 78-73 126-64 49 9 67 56 115 59 40 3 75-15 105-54"/>
+    <path d="M310 704c53-49 105-70 164-58 46 9 58 61 107 66 37 4 64-10 92-43"/>
+    <path d="M280 826c78-25 148-37 224-28 55 7 80 43 126 35 31-6 51-22 76-48"/>
+  </g>
+</svg>
