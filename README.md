@@ -57,7 +57,7 @@ Most basic note apps stop at formatted text or require a cloud account. WovenNot
 WovenNote currently targets Windows 10/11 x64.
 
 1. Open the [latest GitHub release](https://github.com/YusufHasanSaygili/WovenNote/releases/latest).
-2. Download `WovenNote Setup 0.1.7.exe`.
+2. Download `WovenNote.Setup.0.1.7.exe`.
 3. Run the installer and choose an installation directory.
 4. Launch WovenNote from the desktop or Start menu shortcut.
 
