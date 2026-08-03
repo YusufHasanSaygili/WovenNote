@@ -94,7 +94,7 @@ WovenNote can migrate data from its pre-rename application profile and can read 
 ### Requirements
 
 - Windows x64
-- Node.js 22.12 or newer
+- Node.js 24.13 or newer
 - npm 10 or newer
 
 ### Run locally
